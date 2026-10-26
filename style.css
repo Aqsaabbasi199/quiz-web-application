@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Quiz container */
+#quizBox {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(30, 20, 70, 0.25);
+}
+
+/* Question heading */
+#quizBox h1,
+#quizBox h2 {
+    color: #25213b;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* Option labels */
+#quizBox label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 15px 18px;
+    margin: 12px 0;
+    border: 2px solid #eeeaf7;
+    border-radius: 13px;
+    background: #faf9ff;
+    color: #48415e;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+#quizBox label:hover {
+    background: #f0ebff;
+    border-color: #8b5cf6;
+    transform: translateY(-2px);
+}
+
+/* Radio buttons */
+#quizBox input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: #764ba2;
+    cursor: pointer;
+}
+
+/* Selected option */
+#quizBox label:has(input:checked) {
+    background: #f0eaff;
+    border-color: #8b5cf6;
+    color: #6d28d9;
+}
+
+/* Next button */
+#nextBtn {
+    display: block;
+    margin: 25px auto 0;
+    padding: 13px 35px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Button hover */
+#nextBtn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(118, 75, 162, 0.3);
+}
+
+/* Disabled button */
+#nextBtn:disabled {
+    background: #d6d0e2;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    #quizBox {
+        padding: 20px 16px;
+    }
+
+    #nextBtn {
+        width: 100%;
+    }
+}
